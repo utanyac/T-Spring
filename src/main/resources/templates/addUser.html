@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add user</title>
+    <link rel="stylesheet" href="../css/addUser.css"></link>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/addUser.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2 id="form_title" class="form_subject"> 添加新用户</h2>
+    <form id="addUserForm">
+        <p class="form_subject">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="user_name" placeholder="请输入姓名" required>
+        </p>
+        <p class="form_subject">
+            <label for="age">年龄：</label>
+            <input type="number" id="age" name="age" placeholder="请输入年龄" required>
+        </p>
+        <p class="form_subject">
+            <label for="email">邮箱：</label>
+            <input type="email" id="email" name="email" placeholder="请输入邮箱" required>
+        </p>
+        <p class="form_subject">
+            <label for="phone">电话：</label>
+            <input type="tel" id="phone" pattern="[0-9]{11}" name="phone" placeholder="请输入电话" required>
+        </p>
+        <p class="form_subject">
+            <label for="skill">技能：</label>
+            <select id="skill" placeholder="请选择语言技能" name="skill" required>
+                <option value="0">其他语言</option>
+                <option value="1">JAVA</option>
+                <option value="2">GO</option>
+                <option value="3">PHP</option>
+                <option value="4">PYTHON</option>
+                <option value="5">RUBY</option>
+            </select>
+        </p>
+        <p class="form_subject">
+            <label for="introduce"></label>
+            <textarea id="introduce" name="introduce" placeholder="请输入自我介绍"></textarea>
+        </p>
+        <div class="form_subject">
+            <input type="submit" id="addUserButton">
+            <input type="reset" id="reset">
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
