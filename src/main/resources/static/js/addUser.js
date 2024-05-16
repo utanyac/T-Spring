@@ -11,7 +11,7 @@ $(document).ready(function () {
         console.log("postData", postData);
 
         $.ajax({
-            url: '/tspring/adduser',
+            url: '/tspring/add/user',
             type: 'POST',
             data: JSON.stringify(postData),
             contentType: 'application/json',

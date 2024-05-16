@@ -5,4 +5,10 @@
         INSERT INTO user (user_name, age, email, phone, skill, others)
         VALUES (#{userName}, #{age}, #{email}, #{phone}, #{skill}, #{others})
     </insert>
+
+    <select id="selectAll" resultType="com.cc.tspring.entity.User">
+        SELECT *
+        FROM tspring.user
+    </select>
+
 </mapper>

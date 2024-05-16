@@ -17,3 +17,10 @@ mybatis:
   type-aliases-package: com.cc.tspring.entity  # ???????
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    root: info
+  file:
+    name: D:\Code\utanyac\T-Spring\log\tspring.log
+    path: D:\Code\utanyac\T-Spring\log
