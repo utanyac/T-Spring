@@ -20,9 +20,12 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/add/user")
-    public void addUser(@RequestBody User user) {
+    public CustomResponse<User> addUser(@RequestBody User user) {
         logger.info("---------- 添加一个新用户 ----------");
         userService.add(user);
+        CustomResponse<User> customResponse = new CustomResponse<>();
+        customResponse.message("success").status(200).data(user);
+        return customResponse;
     }
 
     @GetMapping("list/users")

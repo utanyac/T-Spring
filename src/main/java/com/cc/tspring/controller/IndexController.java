@@ -16,9 +16,14 @@ public class IndexController {
         return "home";
     }
 
-    @RequestMapping("/user")
+    @RequestMapping("/addUser")
     public String user() {
         return "addUser";
+    }
+
+    @RequestMapping("/listUsers")
+    public String users(){
+        return "listUsers";
     }
 
 }

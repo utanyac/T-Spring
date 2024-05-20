@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cc.tspring.dao.UserMapper">
+
+    <resultMap id="UserResultMap" type="com.cc.tspring.entity.User">
+        <id property="id" column="id" />
+        <result property="userName" column="user_name" />
+    </resultMap>
+    
     <insert id="addOneUser" parameterType="com.cc.tspring.entity.User">
         INSERT INTO user (user_name, age, email, phone, skill, others)
         VALUES (#{userName}, #{age}, #{email}, #{phone}, #{skill}, #{others})
     </insert>
 
-    <select id="selectAll" resultType="com.cc.tspring.entity.User">
+    <select id="selectAll" resultMap="UserResultMap">
         SELECT *
         FROM tspring.user
     </select>

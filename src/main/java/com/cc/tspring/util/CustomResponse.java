@@ -1,7 +1,8 @@
 package com.cc.tspring.util;
 
+import lombok.Data;
 import org.springframework.http.ResponseEntity;
-
+@Data
 public class CustomResponse<T> {
     private String message;
     private T data;

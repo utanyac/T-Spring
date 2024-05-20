@@ -16,10 +16,11 @@ $(document).ready(function () {
             data: JSON.stringify(postData),
             contentType: 'application/json',
             success: function (response) {
-                alert(response);
+                // alert(response);
+                window.location.href = "/tspring/listUsers"
             },
-            error: function (response) {
-                alert(response);
+            error: function (xhr, status, error) {
+                console.error(error)
             }
         })
     })
